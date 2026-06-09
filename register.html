@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | HackNova 2025</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">HackNova</a>
+        <a href="index.html" class="nav-back">← Back to Home</a>
+    </nav>
+
+    <div class="register-container">
+        <div class="bg-glow"></div>
+
+        <div class="register-card">
+            <span class="sec-tag">Join the Battle</span>
+            <h1 class="form-title">Register Team</h1>
+            <p class="form-desc">Secure your spot at HackNova '25. Only the team leader needs to fill out this form for
+                the whole team.</p>
+
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="teamName">Team Name</label>
+                    <input type="text" id="teamName" name="teamName" class="form-control"
+                        placeholder="e.g. Byte Bandits" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="college">College / University</label>
+                    <input type="text" id="college" name="college" class="form-control"
+                        placeholder="Name of your institution" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="domain">Preferred Problem Domain</label>
+                    <select id="domain" name="domain" class="form-control" required>
+                        <option value="" disabled selected>Select a domain...</option>
+                        <option value="AI/ML">Artificial Intelligence & ML</option>
+                        <option value="Web3">Web3 & Blockchain</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="IoT">IoT & Hardware</option>
+                        <option value="HealthTech">HealthTech</option>
+                        <option value="Open">Open Innovation</option>
+                    </select>
+                </div>
+
+                <hr style="border:none; border-top:1px solid var(--border); margin: 2rem 0;">
+
+                <h3
+                    style="margin-bottom: 1rem; color: var(--cyan); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.05em;">
+                    Team Leader Details</h3>
+                <div class="form-group">
+                    <label for="leaderName">Full Name</label>
+                    <input type="text" id="leaderName" name="leaderName" class="form-control" placeholder="John Doe"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address (Confirmation will be sent here)</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="john@college.edu"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone / WhatsApp Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 98765 43210"
+                        required>
+                </div>
+
+                <hr style="border:none; border-top:1px solid var(--border); margin: 2rem 0;">
+
+                <h3
+                    style="margin-bottom: 1rem; color: var(--purple); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.05em;">
+                    Team Members</h3>
+                <div class="form-group">
+                    <label for="teamSize">Total Team Size (Including Leader)</label>
+                    <select id="teamSize" name="teamSize" class="form-control" required>
+                        <option value="2">2 Members</option>
+                        <option value="3">3 Members</option>
+                        <option value="4">4 Members</option>
+                    </select>
+                </div>
+
+                <div id="dynamicMembersContainer"></div>
+
+                <button type="submit" class="btn-submit" id="submitBtn">Complete Registration</button>
+
+                <div id="statusMessage" class="status-msg"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
